@@ -31,12 +31,29 @@
     "@types/node": "^20.11.6",
     "@typescript-eslint/eslint-plugin": "^6.19.1",
     "@typescript-eslint/parser": "^6.19.1",
+    "autoprefixer": "^10.4.14",
     "eslint": "^8.56.0",
     "eslint-plugin-qwik": "^1.4.5",
+    "postcss": "^8.4.31",
     "prettier": "^3.2.4",
+    "prettier-plugin-tailwindcss": "^0.5.4",
+    "tailwindcss": "3.3.3",
     "typescript": "5.3.3",
     "undici": "*",
     "vite": "^5.0.12",
     "vite-tsconfig-paths": "^4.2.1"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.15.10",
+    "sharp": "^0.33.2",
+    "styled-components": "^6.1.8",
+    "twin.macro": "^3.4.1"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "styled-components"
+    }
   }
 }

@@ -1,102 +1,51 @@
 import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import { type DocumentHead, routeLoader$ } from "@builder.io/qwik-city";
 
-import Counter from "../components/starter/counter/counter";
-import Hero from "../components/starter/hero/hero";
-import Infobox from "../components/starter/infobox/infobox";
-import Starter from "../components/starter/next-steps/next-steps";
+import groupsJson from '../media/groups.json'
+import type { Group } from '../types'
+
+function getGroups(): Promise<Group[]> {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(groupsJson.data);
+    }, 500);
+  });
+}
+
+export const useGroups = routeLoader$(async () => {
+  // This code runs only on the server, after every navigation
+  const groups = await getGroups()
+  return groups 
+});
 
 export default component$(() => {
+  const groups = useGroups();
   return (
     <>
-      <Hero />
-      <Starter />
+      <main>
+        <div class="pb-8 md:pb-28 static lg:relative z-10">
+          <div class="pt-20 md:pt-24 pb-12 max-w-7xl mx-auto justify-between">
+            <div data-testid="home-cardgame-section" class="container mx-auto px-4 lg:px-10">
+              {groups.value.map((item, idx) => (
+                <section class="mb-8 md:mb-10" key={`person-${idx}`}>
+                  <h2 class="text-base md:text-xl font-bold pl-4 md:pl-6 border-l-4 border-l-blue-600 mb-4 md:mb-8">{item.title}</h2>
 
-      <div role="presentation" class="ellipsis"></div>
-      <div role="presentation" class="ellipsis ellipsis-purple"></div>
-
-      <div class="container container-center container-spacing-xl">
-        <h3>
-          You can <span class="highlight">count</span>
-          <br /> on me
-        </h3>
-        <Counter />
-      </div>
-
-      <div class="container container-flex">
-        <Infobox>
-          <div q:slot="title" class="icon icon-cli">
-            CLI Commands
+                  <div class="grid grid-cols-3 gap-3 md:grid-cols-5 md:gap-4 lg:grid-cols-6 lg:gap-6">
+                    {item.categories.map((game, idx) => (
+                      <div key={idx} class="bg-white shadow rounded-lg md:rounded-2xl p-1 md:p-2 hover:shadow-lg cursor-pointer transition-all">
+                        <div class="w-full h-auto bg-gray-200 rounded-lg" style={{ aspectRatio: '1 / 1' }}>
+                          <img src={game.imagePath} alt={game.name} width={300} height={300} loading="lazy" decoding="auto" class="rounded-lg" />
+                        </div>
+                        <p class="text-xs md:text-sm font-semibold text-gray-600 mt-1 md:mt-2 text-center" style={{ minHeight: '40px' }}>{game.name}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              ))}
+            </div>
           </div>
-          <>
-            <p>
-              <code>npm run dev</code>
-              <br />
-              Starts the development server and watches for changes
-            </p>
-            <p>
-              <code>npm run preview</code>
-              <br />
-              Creates production build and starts a server to preview it
-            </p>
-            <p>
-              <code>npm run build</code>
-              <br />
-              Creates production build
-            </p>
-            <p>
-              <code>npm run qwik add</code>
-              <br />
-              Runs the qwik CLI to add integrations
-            </p>
-          </>
-        </Infobox>
-
-        <div>
-          <Infobox>
-            <div q:slot="title" class="icon icon-apps">
-              Example Apps
-            </div>
-            <p>
-              Have a look at the <a href="/demo/flower">Flower App</a> or the{" "}
-              <a href="/demo/todolist">Todo App</a>.
-            </p>
-          </Infobox>
-
-          <Infobox>
-            <div q:slot="title" class="icon icon-community">
-              Community
-            </div>
-            <ul>
-              <li>
-                <span>Questions or just want to say hi? </span>
-                <a href="https://qwik.builder.io/chat" target="_blank">
-                  Chat on discord!
-                </a>
-              </li>
-              <li>
-                <span>Follow </span>
-                <a href="https://twitter.com/QwikDev" target="_blank">
-                  @QwikDev
-                </a>
-                <span> on Twitter</span>
-              </li>
-              <li>
-                <span>Open issues and contribute on </span>
-                <a href="https://github.com/BuilderIO/qwik" target="_blank">
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <span>Watch </span>
-                <a href="https://qwik.builder.io/media/" target="_blank">
-                  Presentations, Podcasts, Videos, etc.
-                </a>
-              </li>
-            </ul>
-          </Infobox>
         </div>
-      </div>
+      </main>
     </>
   );
 });
