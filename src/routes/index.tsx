@@ -40,6 +40,8 @@ export default component$(() => {
                 alt="caption"
                 width={1080}
                 height={500}
+                loading="eager"
+                decoding="auto"
               />
               <img
                 class="w-full h-full object-cover object-center"
@@ -47,6 +49,8 @@ export default component$(() => {
                 alt="caption"
                 width={1080}
                 height={500}
+                loading="eager"
+                decoding="auto"
               />
               <img
                 class="w-full h-full object-cover object-center"
@@ -54,6 +58,8 @@ export default component$(() => {
                 alt="caption"
                 width={1080}
                 height={500}
+                loading="eager"
+                decoding="auto"
               />
             </Slider>
             <div data-testid="home-cardgame-section" class="container mx-auto px-4 lg:px-10">
