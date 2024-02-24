@@ -41,24 +41,6 @@ export default component$(() => {
                 loading="eager"
                 decoding="auto"
               />
-              <img
-                class="w-full h-full object-cover object-center"
-                src="https://assets.lapakgaming.com/lapakgaming/images/banner/202402/Ff5000-Banner.png?tr=w-1080%2Cq-75"
-                alt="caption"
-                width={1080}
-                height={500}
-                loading="eager"
-                decoding="auto"
-              />
-              <img
-                class="w-full h-full object-cover object-center"
-                src="https://assets.lapakgaming.com/lapakgaming/images/banner/202402/Ff5000-Banner.png?tr=w-1080%2Cq-75"
-                alt="caption"
-                width={1080}
-                height={500}
-                loading="eager"
-                decoding="auto"
-              />
             </Slider>
             <div data-testid="home-cardgame-section" class="container mx-auto px-4 lg:px-10">
               {groups.value.map((item, idx) => (
