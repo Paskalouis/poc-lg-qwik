@@ -22,11 +22,9 @@ export const useGroups = routeLoader$(async () => {
 export default component$(() => {
   const groups = useGroups();
   const sliderSettings = {
-    scrollSpeed: 5,
+    scrollSpeed: 1,
     gap: 20,
     showScrollbar: false,
-    autoScroll: true,
-    autoScrollSpeed: 10,
   }
   return (
     <>
