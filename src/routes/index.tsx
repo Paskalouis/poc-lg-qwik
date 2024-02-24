@@ -21,64 +21,40 @@ export const useGroups = routeLoader$(async () => {
 
 export default component$(() => {
   const groups = useGroups();
+  const sliderSettings = {
+    scrollSpeed: 5,
+    gap: 20,
+    showScrollbar: false,
+    autoScroll: true,
+    autoScrollSpeed: 10,
+  }
   return (
     <>
       <main>
         <div class="pb-8 md:pb-28 static lg:relative z-10">
           <div class="pt-20 md:pt-24 pb-12 max-w-7xl mx-auto justify-between">
-            <Slider>
-              <a
-                href="#"
-                class="relative block w-full h-auto rounded-xl md:rounded-2xl overflow-hidden"
-                style={{ aspectRatio: '724/260' }}
-              >
-                <img
-                  class="w-full h-full object-cover object-center"
-                  src="https://mediamaz.co.id/wp-content/uploads/2022/04/download-icon-mountainsphotophotosplaceholdersunicon-1320165661388177228_512.png"
-                  alt="caption"
-                  width={400}
-                  height={300}
-                />
-              </a>
-              <a
-                href="#"
-                class="relative block w-full h-auto rounded-xl md:rounded-2xl overflow-hidden"
-                style={{ aspectRatio: '724/260' }}
-              >
-                <img
-                  class="w-full h-full object-cover object-center"
-                  src="https://mediamaz.co.id/wp-content/uploads/2022/04/download-icon-mountainsphotophotosplaceholdersunicon-1320165661388177228_512.png"
-                  alt="caption"
-                  width={400}
-                  height={300}
-                />
-              </a>
-              <a
-                href="#"
-                class="relative block w-full h-auto rounded-xl md:rounded-2xl overflow-hidden"
-                style={{ aspectRatio: '724/260' }}
-              >
-                <img
-                  class="w-full h-full object-cover object-center"
-                  src="https://mediamaz.co.id/wp-content/uploads/2022/04/download-icon-mountainsphotophotosplaceholdersunicon-1320165661388177228_512.png"
-                  alt="caption"
-                  width={400}
-                  height={300}
-                />
-              </a>
-              <a
-                href="#"
-                class="relative block w-full h-auto rounded-xl md:rounded-2xl overflow-hidden"
-                style={{ aspectRatio: '724/260' }}
-              >
-                <img
-                  class="w-full h-full object-cover object-center"
-                  src="https://mediamaz.co.id/wp-content/uploads/2022/04/download-icon-mountainsphotophotosplaceholdersunicon-1320165661388177228_512.png"
-                  alt="caption"
-                  width={400}
-                  height={300}
-                />
-              </a>
+            <Slider {...sliderSettings}>
+              <img
+                class="w-full h-full object-cover object-center"
+                src="https://assets.lapakgaming.com/lapakgaming/images/banner/202402/Ff5000-Banner.png?tr=w-1080%2Cq-75"
+                alt="caption"
+                width={1080}
+                height={500}
+              />
+              <img
+                class="w-full h-full object-cover object-center"
+                src="https://assets.lapakgaming.com/lapakgaming/images/banner/202402/Ff5000-Banner.png?tr=w-1080%2Cq-75"
+                alt="caption"
+                width={1080}
+                height={500}
+              />
+              <img
+                class="w-full h-full object-cover object-center"
+                src="https://assets.lapakgaming.com/lapakgaming/images/banner/202402/Ff5000-Banner.png?tr=w-1080%2Cq-75"
+                alt="caption"
+                width={1080}
+                height={500}
+              />
             </Slider>
             <div data-testid="home-cardgame-section" class="container mx-auto px-4 lg:px-10">
               {groups.value.map((item, idx) => (
