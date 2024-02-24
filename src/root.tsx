@@ -1,4 +1,5 @@
 import { component$ } from "@builder.io/qwik";
+import { QwikPartytown } from './components/partytown/partytown';
 import {
   QwikCityProvider,
   RouterOutlet,
@@ -23,6 +24,12 @@ export default component$(() => {
         <link rel="manifest" href="/manifest.json" />
         <RouterHead />
         <ServiceWorkerRegister />
+        <QwikPartytown forward={['dataLayer.push']} />
+        <script
+          async
+          type="text/partytown"
+          src="https://www.googletagmanager.com/gtag/js?id=G-PNBXV9K6P5"
+        />
       </head>
       <body lang="en">
         <RouterOutlet />

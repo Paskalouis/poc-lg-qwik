@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@builder.io/partytown': ^0.8.1
   '@builder.io/qwik': ^1.4.5
   '@builder.io/qwik-city': ^1.4.5
   '@emotion/react': ^11.11.3
@@ -37,6 +38,7 @@ dependencies:
   twin.macro: 3.4.1_tailwindcss@3.3.3
 
 devDependencies:
+  '@builder.io/partytown': 0.8.2
   '@builder.io/qwik': 1.4.5_4hukfawue6qx3gggnd7vsgewtu
   '@builder.io/qwik-city': 1.4.5_@types+node@20.11.20
   '@types/eslint': 8.56.3
@@ -1283,6 +1285,12 @@ packages:
       '@babel/helper-string-parser': 7.23.4
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
+
+  /@builder.io/partytown/0.8.2:
+    resolution: {integrity: sha512-WKGE+SO0qUGirW8J+xOWkHeCkfFEoPPvHnFkcdMl+MY3kDbAcTwjZCzjg27JCvoD0h8fH47FR7DSIss0/S5lyg==}
+    engines: {node: '>=18.0.0'}
+    hasBin: true
+    dev: true
 
   /@builder.io/qwik-city/1.4.5_@types+node@20.11.20:
     resolution: {integrity: sha512-M9hr82u49Um8VdRDZGva66VB3E5yhXj5Q9cCe2URj/wDgLdKSbsGYER20ivp6GvkVwPy6MSr8krgzqolUUGB0Q==}
