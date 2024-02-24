@@ -1,3 +1,4 @@
+import { Slider } from "qwik-slider";
 import { component$ } from "@builder.io/qwik";
 import { type DocumentHead, routeLoader$ } from "@builder.io/qwik-city";
 
@@ -25,6 +26,60 @@ export default component$(() => {
       <main>
         <div class="pb-8 md:pb-28 static lg:relative z-10">
           <div class="pt-20 md:pt-24 pb-12 max-w-7xl mx-auto justify-between">
+            <Slider>
+              <a
+                href="#"
+                class="relative block w-full h-auto rounded-xl md:rounded-2xl overflow-hidden"
+                style={{ aspectRatio: '724/260' }}
+              >
+                <img
+                  class="w-full h-full object-cover object-center"
+                  src="https://mediamaz.co.id/wp-content/uploads/2022/04/download-icon-mountainsphotophotosplaceholdersunicon-1320165661388177228_512.png"
+                  alt="caption"
+                  width={400}
+                  height={300}
+                />
+              </a>
+              <a
+                href="#"
+                class="relative block w-full h-auto rounded-xl md:rounded-2xl overflow-hidden"
+                style={{ aspectRatio: '724/260' }}
+              >
+                <img
+                  class="w-full h-full object-cover object-center"
+                  src="https://mediamaz.co.id/wp-content/uploads/2022/04/download-icon-mountainsphotophotosplaceholdersunicon-1320165661388177228_512.png"
+                  alt="caption"
+                  width={400}
+                  height={300}
+                />
+              </a>
+              <a
+                href="#"
+                class="relative block w-full h-auto rounded-xl md:rounded-2xl overflow-hidden"
+                style={{ aspectRatio: '724/260' }}
+              >
+                <img
+                  class="w-full h-full object-cover object-center"
+                  src="https://mediamaz.co.id/wp-content/uploads/2022/04/download-icon-mountainsphotophotosplaceholdersunicon-1320165661388177228_512.png"
+                  alt="caption"
+                  width={400}
+                  height={300}
+                />
+              </a>
+              <a
+                href="#"
+                class="relative block w-full h-auto rounded-xl md:rounded-2xl overflow-hidden"
+                style={{ aspectRatio: '724/260' }}
+              >
+                <img
+                  class="w-full h-full object-cover object-center"
+                  src="https://mediamaz.co.id/wp-content/uploads/2022/04/download-icon-mountainsphotophotosplaceholdersunicon-1320165661388177228_512.png"
+                  alt="caption"
+                  width={400}
+                  height={300}
+                />
+              </a>
+            </Slider>
             <div data-testid="home-cardgame-section" class="container mx-auto px-4 lg:px-10">
               {groups.value.map((item, idx) => (
                 <section class="mb-8 md:mb-10" key={`person-${idx}`}>

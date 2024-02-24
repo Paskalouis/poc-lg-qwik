@@ -16,6 +16,7 @@ specifiers:
   postcss: ^8.4.31
   prettier: ^3.2.4
   prettier-plugin-tailwindcss: ^0.5.4
+  qwik-slider: ^1.1.0
   sharp: ^0.33.2
   styled-components: ^6.1.8
   tailwindcss: 3.3.3
@@ -30,6 +31,7 @@ dependencies:
   '@emotion/react': 11.11.3
   '@emotion/styled': 11.11.0_@emotion+react@11.11.3
   '@mui/material': 5.15.10_5qhz6h2y4u2otpereufetyee2e
+  qwik-slider: 1.1.0
   sharp: 0.33.2
   styled-components: 6.1.8
   twin.macro: 3.4.1_tailwindcss@3.3.3
@@ -7400,6 +7402,11 @@ packages:
     resolution: {integrity: sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==}
     engines: {node: '>=10'}
     dev: true
+
+  /qwik-slider/1.1.0:
+    resolution: {integrity: sha512-PCHzvb/FWQ2Fe+XlrE5geHPAIBH7hxfE+B6P2mXtLxYfUCmEb9iVfhJvc+zwfur7Httt5ds8n+gd6RnXPw1sLg==}
+    engines: {node: '>=15.0.0'}
+    dev: false
 
   /range-parser/1.2.1:
     resolution: {integrity: sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==}
